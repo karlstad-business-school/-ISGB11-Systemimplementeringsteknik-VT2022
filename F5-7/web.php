@@ -9,3 +9,9 @@ $router->get('/banan', function () use ($router) {
 });
 
 $router->get('bilar', 'BilarController@index');
+$router->get('bilar/{id}', 'BilarController@read');
+$router->get('bilar/regnr/{regnr}', 'BilarController@getByRegnr');
+$router->post('bilar', 'BilarController@create');
+$router->put('bilar/{id}', 'BilarController@update');
+$router->delete('bilar/{id}', 'BilarController@delete');
+
